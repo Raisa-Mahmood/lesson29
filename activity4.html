@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Callback function in Javascript</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        function sum(a,b,a_callback){
+            let result = a+b;
+            a_callback(result);
+        }
+        function display(some){
+            document.getElementById("p1").innerHTML=some;
+        }
+        sum(10,20,display);
+        function avg(a){
+            document.getElementById("p2").innerHTML = a/5;
+        }
+        sum(10, 78, avg);
+    </script>
+</body>
+</html>

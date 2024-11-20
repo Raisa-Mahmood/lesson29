@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JSON in Javascript</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        var student = {'Name':'Milla','grade':1};
+        var JSONstud = JSON.stringify(student);
+        var RECstud = JSON.parse(JSONstud);
+        document.getElementById("p1").innerHTML = "The name of the student is "+RECstud.Name;
+        document.getElementById("p2").innerHTML = "The grade of the student is " + RECstud['grade'];
+    </script>
+</body>
+</html>

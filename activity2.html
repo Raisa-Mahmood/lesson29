@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>async function in Javascript</h2>
+    <p id="p1"></p>
+    <script>
+        async function add(a,b){
+            let sum=await (a+b)
+            display(sum)
+        }
+        function display(some){
+            document.getElementById("p1").innerHTML="The sum is "+some;
+        }
+        add(3,50);
+    </script>
+</body>
+</html>

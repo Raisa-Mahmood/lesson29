@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Promise in Javascript</h2>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p1"></p>
+    <script>
+        function add(a,b){
+            let sum=a+b;
+            display(sum);
+        }
+        function display(some){
+            document.getElementById("p1").innerHTML="Sum is "+some;
+        }
+        let apromisr=new Promise(function(apromise,arejection){
+            //producing codes
+            let x=0;
+            if (x==0){
+                apromise("Ok");
+            }
+            else{
+                arejection("Error");
+            }
+        });
+        //consuming codes
+        apromisr.then(
+            function(value){add(38,45);},
+            function (error) { add(error); },
+        )
+    </script>
+</body>
+</html>
